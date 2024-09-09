@@ -1,0 +1,12 @@
+semantic_models:
+  - name: customers
+    entities:
+      - name: customer
+        expr: customer_id
+        type: primary
+    model: ref('stg_customers')
+    dimensions:
+      name: last_ordered_at
+      type: time
+      type_params:
+        time_granularity: day
